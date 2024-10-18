@@ -12,6 +12,21 @@ body{
   justify-content: space-between;
   align-items: center;
 }
+.todo-item.completed {
+  background-color: #f0f0f0;  /* 회색 배경 */
+  color: #888;  /* 회색 텍스트 */
+  text-decoration: line-through;  /* 완료된 항목은 취소선 표시 (선택 사항) */
+}
+.todo-item.animate-move {
+  transform: translateY(20px);  /* 하단으로 이동하는 애니메이션 */
+  opacity: 1;  /* 점차 사라지는 효과 */
+}
+
+.todo-item.completed.animate-move {
+  transform: translateY(0);  /* 원래 위치로 복귀 */
+  opacity: 1;  /* 투명도 회복 */
+}
+
 .todo-content{
   padding:1em
 }
